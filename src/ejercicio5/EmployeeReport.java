@@ -6,7 +6,6 @@ public class EmployeeReport {
         System.out.println("Employee Report:");
         System.out.println("Name: " + employee.getName());
         System.out.println("Salary: " + Employee.getSalary());
-        // Puedes agregar más detalles al reporte según sea necesario
     }
     
 }
