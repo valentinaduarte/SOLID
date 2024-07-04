@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Order {
     private List<String> items;
-    private OrderCalculator calculator;
+    private double totalAmount;
 
-    public Order(List<String> items, OrderCalculator calculator) {
+    public Order(List<String> items) {
         this.items = new ArrayList(items);
-        this.calculator = calculator;
+        this.totalAmount = OrderCalculator.calculateTotal(items);
     }
 
     public List<String> getItems() {
@@ -17,6 +17,6 @@ public class Order {
     }
 
     public double getTotalAmount() {
-        return this.calculator.calculateTotal(this.items);
+        return totalAmount;
     }
 }
