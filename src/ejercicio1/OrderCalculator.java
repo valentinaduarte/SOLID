@@ -1,25 +1,22 @@
 package ejercicio1;
-import java.util.Iterator;
 import java.util.List;
 
 public class OrderCalculator {
     public OrderCalculator() {
     }
 
-    public double calculateTotal(List<String> items) {
+    public static double calculateTotal(List<String> items) {
+        // Lógica para calcular el total de la orden
         double total = 0.0;
-
-        String item;
-        for(
-        Iterator var5 = items.iterator(); var5.hasNext(); total += this.getPrice(item)) {
-            item = (String)var5.next();
+        for (String item : items) {
+            // Logica para calcular el total de los items .
+            total += getPrice(item);
         }
-
         return total;
     }
 
-    private double getPrice(String item) {
-        double price = Math.random();
+    private static double getPrice(String item) {
+       double price = Math.random();
         return price;
     }
 }
